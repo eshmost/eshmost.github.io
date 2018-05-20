@@ -428,7 +428,7 @@
     $.ajax({
         url: "//formspree.io/revues.info@gmail.com", 
         method: "POST",
-        data: data,
+        data: {message: dataArray},
         dataType: "json"
     });
     alert('Thanks for the email, we\'ll be in touch promptly.');
