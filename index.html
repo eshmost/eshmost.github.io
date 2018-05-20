@@ -419,10 +419,10 @@
     <script>
 
     $("#sendMessage").on("click", function() {
-    dataArray = $("#contactform").serialize();
-    name = dataArray[0].value,
-    email = dataArray[1].value,
-    message = dataArray[2].value
+    dataArray = $("#contactform").serialize().split("&");
+    name = dataArray[0];
+    email = dataArray[1];
+    message = dataArray[2];
     $.ajax({
         url: "//formspree.io/revues.info@gmail.com", 
         method: "POST",
