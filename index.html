@@ -349,7 +349,7 @@
                 <div class="col-md-6">
                     <!-- Form Start-->
                     <div class="contact_from">
-                        <form id="contactform" method="post">
+                        <form id="contactform" onsubmit="sendMessage()">
                             <!-- Message Input Area Start -->
                             <div class="contact_input_area">
                                 <div class="row">
@@ -418,7 +418,7 @@
     <!-- Jquery-2.2.4 JS -->
     <script>
 
-    $("#sendMessage").on("click", function() {
+    function sendMessage() {
     dataArray = $("#contactform").serializeArray();
     name = dataArray[0].value;
     email = dataArray[1].value;
@@ -431,7 +431,7 @@
     });
     alert('Thanks for the email, we\'ll be in touch promptly.');
     return false;
-    });
+    };
 
     </script>
     <script src="js/jquery-2.2.4.min.js"></script>
