@@ -420,15 +420,13 @@
 
     $("#sendMessage").on("click", function() {
     dataArray = $("#contactform").serialize();
-    var data = {
-        name: dataArray[0].value,
-        email: dataArray[1].value,
-        message: dataArray[2].value
-    };
+    name: dataArray[0].value,
+    email: dataArray[1].value,
+    message: dataArray[2].value
     $.ajax({
         url: "//formspree.io/revues.info@gmail.com", 
         method: "POST",
-        data: {message: dataArray},
+        data: { email: email, name: name, message: message},
         dataType: "json"
     });
     alert('Thanks for the email, we\'ll be in touch promptly.');
